@@ -15,8 +15,10 @@ export function Hero() {
               Full Stack Developer
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-pretty">
-              I build accessible, pixel-perfect digital experiences for the web. 
-              Passionate about creating scalable and secure web applications with over 5 years of experience.
+            Full Stack Developer specializing in Laravel,
+             Next.js, REST APIs, and scalable business web applications.
+              I build secure, performance-focused systems for POS, e-commerce,
+               ticketing, and payment platforms. Open to international opportunities and relocation.
             </p>
 
             <div className="flex items-center gap-2 text-muted-foreground mb-8">
