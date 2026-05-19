@@ -8,11 +8,13 @@ export function About() {
             {"I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability."}
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-          I am a Full Stack Developer with 5+ years of experience building secure, scalable, and user-friendly web applications. My main expertise is Laravel backend development, RESTful API design, authentication systems, database architecture, and modern frontend development with Next.js and React.
+          I am a Full Stack Developer with 5+ years of professional experience building secure, scalable, and high-performance web applications. My expertise includes Laravel backend development, RESTful API architecture, authentication systems, database design, and modern frontend development using Next.js and React.
 
-I have worked on real business platforms including POS systems, e-commerce stores, online ticketing platforms, media platforms, and payment-integrated applications. I focus on clean code, performance optimization, maintainable architecture, and practical business solutions.
+I have worked on enterprise business systems including warehouse management platforms, POS systems, e-commerce applications, online ticketing solutions, media platforms, and payment-integrated web applications. I focus on clean architecture, performance optimization, maintainable code, and practical business-driven solutions.
 
-I am currently open to international job opportunities, relocation, and remote roles where I can contribute as a Laravel, Backend, or Full Stack Developer.
+Currently, I am working remotely as a Full Stack Developer at Zaman IT Network, developing enterprise web applications and scalable business systems for local and international clients.
+
+I am open to international opportunities, relocation, and remote roles where I can contribute as a Full Stack, Backend, or Laravel Developer.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {"In the past, I've had the opportunity to develop software across a variety of settings — from "}
