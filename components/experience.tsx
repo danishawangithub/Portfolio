@@ -4,8 +4,40 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-react"
 
 const experiences = [
+
+
   {
-    period: "2024 — Present",
+    period: "2026, June — Present",
+    title: "Full Stack Developer",
+    company: "Zaman IT Network",
+    location: "Remote",
+    description:
+      "Working as a Full Stack Developer building scalable business applications, enterprise management systems, REST APIs, inventory platforms, POS solutions, and custom web applications for international and local clients.",
+  
+    achievements: [
+      "Developed enterprise warehouse and inventory management systems",
+      "Built scalable REST APIs and backend architectures",
+      "Worked on POS systems and business automation platforms",
+      "Implemented authentication and role-based access control systems",
+      "Designed optimized MySQL database structures",
+      "Developed responsive frontend interfaces using Next.js and React",
+    ],
+  
+    skills: [
+      "Laravel",
+      "Next.js",
+      "React",
+      "MySQL",
+      "REST APIs",
+      "Authentication",
+      "Tailwind CSS",
+    ],
+  
+    link: "#",
+  },
+
+  {
+    period: "2024 — 2026",
     title: "Full Stack Developer",
     company: "KanooPay",
     location: "Remote",
