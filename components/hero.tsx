@@ -60,7 +60,7 @@ export function Hero() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://github.com"
+                href="https://github.com/danishawangithub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
