@@ -35,26 +35,32 @@ const experiences = [
   
     link: "#",
   },
-
   {
-    period: "2024 — 2026",
+    period: "2024 — 2025",
     title: "Full Stack Developer",
     company: "KanooPay",
     location: "Remote",
     description:
-      "Developing and maintaining production-level business applications including warehouse management systems, POS platforms, e-commerce solutions, ticketing systems, media platforms, REST APIs, and payment-integrated web applications.",
+      "Developed and maintained production-level business applications including POS systems, e-commerce platforms, ticketing systems, media platforms, and payment-integrated solutions.",
+  
     achievements: [
-      "Developed MAK Imports Warehouse & POS Management System for a Scotland-based business",
-      "Built inventory, stock, supplier, customer, sales, purchase, and financial reporting modules",
-      "Built and maintained KanooPOS digital Point of Sale system",
-      "Developed Digital Canopi online book sale platform with payment integration",
-      "Worked on Tikkets live event ticketing and streaming platform",
-      "Designed scalable REST APIs for frontend and mobile applications",
-      "Implemented authentication, authorization, and role-based access control",
-      "Designed and optimized MySQL database structures for business operations",
+      "Built and maintained KanooPOS digital POS system",
+      "Developed Digital Canopi online book sale platform",
+      "Worked on Tikkets live event streaming and ticketing platform",
+      "Developed scalable REST APIs for frontend and mobile integration",
+      "Implemented authentication and role-based access control",
+      "Optimized MySQL database structures and backend performance",
     ],
-    skills: ["Laravel", "Next.js", "MySQL", "REST APIs", "POS", "Inventory", "Payment Integration"],
-    link: "https://hub.bwwarehouse.co.uk/",
+  
+    skills: [
+      "Laravel",
+      "Next.js",
+      "MySQL",
+      "REST APIs",
+      "JWT",
+    ],
+  
+    link: "https://kanoopos.com/",
   },
   {
     period: "2021 — 2024",
