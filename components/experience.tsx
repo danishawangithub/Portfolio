@@ -9,31 +9,37 @@ const experiences = [
     title: "Full Stack Developer",
     company: "KanooPay",
     location: "Remote",
-    description: "Developing and maintaining digital POS systems, e-commerce platforms, and live event streaming solutions. Building scalable RESTful APIs and implementing secure authentication with role-based access control.",
+    description:
+      "Developing and maintaining production-level business applications including warehouse management systems, POS platforms, e-commerce solutions, ticketing systems, media platforms, REST APIs, and payment-integrated web applications.",
     achievements: [
-      "Developed KanooPOS digital POS system",
-      "Built Canopi online book sale platform with payment integration",
-      "Developed Tikkets live event streaming system",
-      "Worked on 54Connects (Africa media & news platform)",
-      "Built AKH Project with Next.js and modern web technologies",
+      "Developed MAK Imports Warehouse & POS Management System for a Scotland-based business",
+      "Built inventory, stock, supplier, customer, sales, purchase, and financial reporting modules",
+      "Built and maintained KanooPOS digital Point of Sale system",
+      "Developed Digital Canopi online book sale platform with payment integration",
+      "Worked on Tikkets live event ticketing and streaming platform",
+      "Designed scalable REST APIs for frontend and mobile applications",
+      "Implemented authentication, authorization, and role-based access control",
+      "Designed and optimized MySQL database structures for business operations",
     ],
-    skills: ["Laravel", "Next.js", "MySQL", "REST APIs", "JWT"],
-    link: "https://kanoopos.com/"
+    skills: ["Laravel", "Next.js", "MySQL", "REST APIs", "POS", "Inventory", "Payment Integration"],
+    link: "https://hub.bwwarehouse.co.uk/",
   },
   {
     period: "2021 — 2024",
     title: "Laravel Developer",
     company: "Bluegruzz",
     location: "Remote",
-    description: "Developed backend systems and secure REST APIs for frontend integration. Optimized database queries and integrated third-party APIs and payment systems.",
+    description:
+      "Worked as a Laravel Developer building backend systems, REST APIs, database-driven applications, and third-party integrations for production web platforms. Focused on performance, security, and maintainable backend code.",
     achievements: [
+      "Developed backend applications using Laravel and Core PHP",
       "Built secure REST APIs for frontend integration",
-      "Optimized database queries and improved performance",
+      "Optimized MySQL queries and improved application performance",
       "Integrated third-party APIs and payment systems",
-      "Maintained production-level applications",
+      "Maintained and debugged live production applications",
     ],
-    skills: ["Laravel", "PHP", "MySQL", "REST APIs", "Git"],
-    link: "#"
+    skills: ["Laravel", "Core PHP", "MySQL", "REST APIs", "Git"],
+    link: "#",
   },
 ]
 
@@ -51,12 +57,17 @@ export function Experience() {
               className="w-full h-full object-cover object-top"
             />
           </div>
+
           <div>
-            <h2 className="text-sm font-medium text-primary uppercase tracking-widest">Work Experience</h2>
-            <p className="text-muted-foreground text-sm mt-1">5+ years of professional development</p>
+            <h2 className="text-sm font-medium text-primary uppercase tracking-widest">
+              Work Experience
+            </h2>
+            <p className="text-muted-foreground text-sm mt-1">
+              5+ years building scalable business web applications
+            </p>
           </div>
         </div>
-        
+
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <Link
@@ -70,6 +81,7 @@ export function Experience() {
                 <div className="text-sm text-muted-foreground font-medium">
                   {exp.period}
                 </div>
+
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
                     {exp.title} · {exp.company}
@@ -77,20 +89,22 @@ export function Experience() {
                       <ArrowUpRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                     )}
                   </h3>
+
                   <p className="text-sm text-muted-foreground mb-4">{exp.location}</p>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
+
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {exp.description}
+                  </p>
+
                   <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1 mb-4">
                     {exp.achievements.map((achievement, i) => (
                       <li key={i}>{achievement}</li>
                     ))}
                   </ul>
+
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill) => (
-                      <Badge
-                        key={skill}
-                        variant="secondary"
-                        className="bg-primary/10 text-primary hover:bg-primary/20 border-0"
-                      >
+                      <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 border-0">
                         {skill}
                       </Badge>
                     ))}

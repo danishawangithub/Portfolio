@@ -1,43 +1,56 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowUpRight, ShoppingCart, Ticket, Newspaper, BookOpen, Monitor } from "lucide-react"
+import { ArrowUpRight, ShoppingCart, Ticket, Newspaper, BookOpen, Monitor, Warehouse } from "lucide-react"
 
 const projects = [
   {
-    title: "KanooPOS",
-    description: "A comprehensive digital Point of Sale system designed for modern retail businesses. Features inventory management, sales tracking, and real-time reporting.",
-    icon: Monitor,
-    tech: ["Laravel", "MySQL", "REST API", "JWT Auth"],
-    link: "https://kanoopos.com/"
+    title: "MAK Imports Warehouse & POS Management System",
+    description:
+      "Enterprise warehouse and inventory management system developed for a Scotland-based company. The platform manages products, stock levels, suppliers, customers, sales, purchases, payment tracking, financial reports, invoices, and daily warehouse operations through a centralized admin dashboard.",
+    icon: Warehouse,
+    tech: ["Laravel", "MySQL", "REST APIs", "Authentication", "Inventory System", "POS", "Financial Reports"],
+    link: "https://hub.bwwarehouse.co.uk/",
   },
   {
-    title: "Canopi",
-    description: "Online book sale platform with integrated payment processing. Includes user authentication, shopping cart, and order management systems.",
+    title: "KanooPOS",
+    description:
+      "A digital Point of Sale system for modern retail businesses. The system supports product management, sales tracking, user roles, secure authentication, reporting workflows, and business operations management.",
+    icon: Monitor,
+    tech: ["Laravel", "MySQL", "REST API", "JWT Auth", "POS"],
+    link: "https://kanoopos.com/",
+  },
+  {
+    title: "Digital Canopi",
+    description:
+      "An online book sale platform with product management, order handling, integrated payment processing, and a smooth customer purchasing experience.",
     icon: BookOpen,
     tech: ["Laravel", "Payment Gateway", "MySQL", "Next.js"],
-    link: "https://digitalcanopi.com/"
+    link: "https://digitalcanopi.com/",
   },
   {
     title: "Tikkets",
-    description: "Live event streaming and ticket booking platform. Enables event organizers to sell tickets and stream events to audiences worldwide.",
+    description:
+      "A live event ticketing and streaming platform built with Laravel. Includes event management, ticket booking, payment integration, live streaming support, and admin management features.",
     icon: Ticket,
-    tech: ["Laravel", "Streaming API", "Payment Integration"],
-    link: "https://whitelabel.tikkets.com/"
+    tech: ["Laravel", "Streaming API", "Payment Integration", "Ticketing"],
+    link: "https://whitelabel.tikkets.com/",
   },
   {
     title: "54Connects",
-    description: "Africa-focused media and news platform aggregating content from across the continent. Features real-time news updates and media streaming.",
+    description:
+      "An Africa-focused media and news platform for publishing, managing, and displaying content across multiple categories with a scalable backend system.",
     icon: Newspaper,
     tech: ["Laravel", "REST API", "Content Management"],
-    link: "https://54connects.com/"
+    link: "https://54connects.com/",
   },
   {
     title: "AKH Project",
-    description: "Modern web application built with Next.js. Features responsive design, optimized performance, and seamless user experience.",
+    description:
+      "A modern frontend web application built with Next.js and Tailwind CSS, focused on responsive design, clean UI, performance, and maintainable frontend structure.",
     icon: ShoppingCart,
     tech: ["Next.js", "React", "Tailwind CSS"],
-    link: "https://akh-project-phase-self.vercel.app/"
+    link: "https://akh-project-phase-self.vercel.app/",
   },
 ]
 
@@ -45,19 +58,16 @@ export function Projects() {
   return (
     <section id="projects" className="py-20 px-6 bg-card/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-sm font-medium text-primary uppercase tracking-widest mb-12">Featured Projects</h2>
-        
+        <h2 className="text-sm font-medium text-primary uppercase tracking-widest mb-12">
+          Featured Projects
+        </h2>
+
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => {
             const Icon = project.icon
+
             return (
-              <Link
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <Link key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="group h-full bg-card/50 border-border hover:border-primary/50 transition-all hover:bg-card">
                   <CardHeader>
                     <div className="flex items-start justify-between">
@@ -66,21 +76,20 @@ export function Projects() {
                       </div>
                       <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
+
                     <CardTitle className="text-foreground group-hover:text-primary transition-colors">
                       {project.title}
                     </CardTitle>
+
                     <CardDescription className="text-muted-foreground leading-relaxed">
                       {project.description}
                     </CardDescription>
                   </CardHeader>
+
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="outline"
-                          className="border-border text-muted-foreground text-xs"
-                        >
+                        <Badge key={tech} variant="outline" className="border-border text-muted-foreground text-xs">
                           {tech}
                         </Badge>
                       ))}

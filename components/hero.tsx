@@ -11,77 +11,48 @@ export function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 text-balance">
               Muhammad Danish Ashraf
             </h1>
+
             <h2 className="text-xl md:text-2xl text-primary font-medium mb-6">
-              Full Stack Developer
+              Full Stack Laravel & Next.js Developer
             </h2>
+
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-pretty">
-            Full Stack Developer specializing in Laravel,
-             Next.js, REST APIs, and scalable business web applications.
-              I build secure, performance-focused systems for POS, e-commerce,
-               ticketing, and payment platforms. Open to international opportunities and relocation.
+              I build scalable business systems, warehouse platforms, POS solutions,
+              e-commerce applications, REST APIs, and enterprise web dashboards.
+              With 5+ years of professional experience, I focus on secure architecture,
+              clean code, performance, and real business problem solving.
             </p>
 
             <div className="flex items-center gap-2 text-muted-foreground mb-8">
               <MapPin className="h-4 w-4 text-primary" />
-              <span>Faisalabad, Pakistan</span>
+              <span>Faisalabad, Pakistan · Open to relocation</span>
             </div>
 
-            {/* Navigation Links */}
             <nav className="flex flex-col gap-3 mb-8">
-              <Link href="#about" className="flex items-center gap-3 group">
-                <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-primary transition-all" />
-                <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors uppercase tracking-widest">
-                  About
-                </span>
-              </Link>
-              <Link href="#experience" className="flex items-center gap-3 group">
-                <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-primary transition-all" />
-                <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors uppercase tracking-widest">
-                  Experience
-                </span>
-              </Link>
-              <Link href="#projects" className="flex items-center gap-3 group">
-                <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-primary transition-all" />
-                <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors uppercase tracking-widest">
-                  Projects
-                </span>
-              </Link>
+              {["about", "experience", "projects"].map((item) => (
+                <Link key={item} href={`#${item}`} className="flex items-center gap-3 group">
+                  <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-primary transition-all" />
+                  <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors uppercase tracking-widest">
+                    {item}
+                  </span>
+                </Link>
+              ))}
             </nav>
 
-            {/* Social Links */}
             <div className="flex items-center gap-4">
-              <Link
-                href="https://www.linkedin.com/in/danish-ashraf-6a12142b7/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="LinkedIn Profile"
-              >
+              <Link href="https://www.linkedin.com/in/danish-ashraf-6a12142b7/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn Profile">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://github.com/danishawangithub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="GitHub Profile"
-              >
+
+              <Link href="https://github.com/danishawangithub" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub Profile">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link
-                href="mailto:dnishashrif@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Send Email"
-              >
+
+              <Link href="mailto:dnishashrif@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Send Email">
                 <Mail className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://wa.me/923007215992"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="WhatsApp"
-              >
+
+              <Link href="https://wa.me/923007215992" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="WhatsApp">
                 <MessageCircle className="h-5 w-5" />
               </Link>
             </div>
@@ -99,7 +70,6 @@ export function Hero() {
                   priority
                 />
               </div>
-              {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/30 rounded-full" />
               <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-primary/20 rounded-full" />
             </div>
