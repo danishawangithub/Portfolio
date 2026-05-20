@@ -1,12 +1,15 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Github, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6">
       <div className="container mx-auto max-w-5xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content */}
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 text-balance">
               Muhammad Danish Ashraf
@@ -23,15 +26,41 @@ export function Hero() {
               clean code, performance, and real business problem solving.
             </p>
 
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Link
+               href="/cv/muhammad-danish-ashraf-cv.pdf"
+                target="_blank"
+                download
+              >
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Download CV
+                </Button>
+              </Link>
+
+              <Link href="mailto:dnishashrif@gmail.com">
+                <Button variant="outline">
+                  Contact Me
+                </Button>
+              </Link>
+            </div>
+
+            {/* Location */}
             <div className="flex items-center gap-2 text-muted-foreground mb-8">
               <MapPin className="h-4 w-4 text-primary" />
               <span>Faisalabad, Pakistan · Open to relocation</span>
             </div>
 
+            {/* Navigation */}
             <nav className="flex flex-col gap-3 mb-8">
               {["about", "experience", "projects"].map((item) => (
-                <Link key={item} href={`#${item}`} className="flex items-center gap-3 group">
+                <Link
+                  key={item}
+                  href={`#${item}`}
+                  className="flex items-center gap-3 group"
+                >
                   <span className="w-8 h-px bg-muted-foreground group-hover:w-16 group-hover:bg-primary transition-all" />
+
                   <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors uppercase tracking-widest">
                     {item}
                   </span>
@@ -39,27 +68,57 @@ export function Hero() {
               ))}
             </nav>
 
+            {/* Social Links */}
             <div className="flex items-center gap-4">
-              <Link href="https://www.linkedin.com/in/danish-ashraf-6a12142b7/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn Profile">
+              
+              {/* LinkedIn */}
+              <Link
+                href="https://www.linkedin.com/in/danish-ashraf-6a12142b7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn Profile"
+              >
                 <Linkedin className="h-5 w-5" />
               </Link>
 
-              <Link href="https://github.com/danishawangithub" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub Profile">
+              {/* GitHub */}
+              <Link
+                href="https://github.com/danishawangithub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub Profile"
+              >
                 <Github className="h-5 w-5" />
               </Link>
 
-              <Link href="mailto:dnishashrif@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Send Email">
+              {/* Email */}
+              <Link
+                href="mailto:dnishashrif@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Send Email"
+              >
                 <Mail className="h-5 w-5" />
               </Link>
 
-              <Link href="https://wa.me/923007215992" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="WhatsApp">
+              {/* WhatsApp */}
+              <Link
+                href="https://wa.me/923007215992"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="WhatsApp"
+              >
                 <MessageCircle className="h-5 w-5" />
               </Link>
             </div>
           </div>
 
+          {/* Right Image */}
           <div className="hidden md:flex justify-center">
             <div className="relative">
+              
               <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-primary/10 border-2 border-primary/30 p-2">
                 <Image
                   src="/images/profile.png"
@@ -70,7 +129,10 @@ export function Hero() {
                   priority
                 />
               </div>
+
+              {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/30 rounded-full" />
+
               <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-primary/20 rounded-full" />
             </div>
           </div>
