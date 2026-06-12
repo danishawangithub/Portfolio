@@ -13,6 +13,14 @@ const projects = [
     link: "https://hub.bwwarehouse.co.uk/",
   },
   {
+    title: "Elegance Pakistan — AI E-Commerce Assistant System",
+    description:
+      "Full-stack AI-powered e-commerce platform for a Pakistani fashion brand. Features a dual chatbot system — an Admin AI Agent for business intelligence and product management, and a Customer AI Assistant for natural language shopping support. Built with Laravel 11 backend and Next.js 14 frontend, integrated with Groq LLM and a custom NLP intent router. Implements Retrieval-Augmented Generation (RAG) for semantic product search and keyword-based customer support. Includes real-time customer analytics dashboard, product intelligence reporting, static policy pages, and auth-gated write-action APIs. Overall system completion: 90%+.",
+    icon: Bot,
+    tech: ["Laravel", "Next.js", "Groq LLM", "OpenAI API", "RAG", "NLP", "Vector Embeddings", "JWT Auth", "MySQL", "REST APIs"],
+    link: "https://github.com/danishawangithub/frontend-laravel-ai-shopbot",
+  },
+  {
     title: "KanooPOS",
     description:
       "A digital Point of Sale system for modern retail businesses. The system supports product management, sales tracking, user roles, secure authentication, reporting workflows, and business operations management.",
