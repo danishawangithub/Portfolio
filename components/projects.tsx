@@ -1,9 +1,26 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowUpRight, ShoppingCart, Ticket, Newspaper, BookOpen, Monitor, Warehouse,Bot } from "lucide-react"
+import { ArrowUpRight, ShoppingCart, Ticket, Newspaper, BookOpen, Monitor, Warehouse, Bot, Vote, Lock, type LucideIcon } from "lucide-react"
 
-const projects = [
+type Project = {
+  title: string
+  description: string
+  icon: LucideIcon
+  tech: string[]
+  link?: string
+  role?: string
+}
+
+const projects: Project[] = [
+  {
+    title: "FIRE242 — National Voter Management & Election Operations Platform",
+    description:
+      "Nationwide election operations platform developed for the Free National Movement (FNM) in The Bahamas. It centralizes voter records, door-to-door surveys, constituency management, role-based access, real-time dashboards, election reporting, and multi-election data while supporting campaign teams from field collection through election day.",
+    icon: Vote,
+    tech: ["Next.js", "React", "Laravel", "PHP", "REST APIs", "RBAC", "Linux VPS"],
+    role: "Full-Stack Developer",
+  },
   {
     title: "MAK Imports Warehouse & POS Management System",
     description:
@@ -73,16 +90,21 @@ export function Projects() {
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => {
             const Icon = project.icon
-
-            return (
-              <Link key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+            const card = (
                 <Card className="group h-full bg-card/50 border-border hover:border-primary/50 transition-all hover:bg-card">
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="p-2 rounded-lg bg-primary/10 w-fit mb-4">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      {project.link ? (
+                        <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-primary">
+                          <Lock className="h-3.5 w-3.5" />
+                          Confidential
+                        </span>
+                      )}
                     </div>
 
                     <CardTitle className="text-foreground group-hover:text-primary transition-colors">
@@ -92,6 +114,11 @@ export function Projects() {
                     <CardDescription className="text-muted-foreground leading-relaxed">
                       {project.description}
                     </CardDescription>
+                    {project.role && (
+                      <p className="pt-2 text-sm font-medium text-foreground">
+                        Role: <span className="text-primary">{project.role}</span>
+                      </p>
+                    )}
                   </CardHeader>
 
                   <CardContent>
@@ -104,7 +131,16 @@ export function Projects() {
                     </div>
                   </CardContent>
                 </Card>
+            )
+
+            return project.link ? (
+              <Link key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                {card}
               </Link>
+            ) : (
+              <div key={index} className="block">
+                {card}
+              </div>
             )
           })}
         </div>
